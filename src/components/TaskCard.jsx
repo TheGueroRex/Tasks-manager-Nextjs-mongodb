@@ -65,7 +65,7 @@ function TaskCard({ task, index }) {
         theme == "light"
           ? "bg-slate-50 text-slate-800"
           : "bg-slate-800 text-slate-100"
-      } relative p-5 flex gap-4 rounded-xl w-[100%] h-[250px] transition`}
+      } relative p-5 flex gap-4 rounded-xl w-[100%] min-h-[150px] transition`}
     >
       <span className="bg-sky-600 w-6 h-6 rounded-[50%] grid place-items-center self-center text-white">
         {index}

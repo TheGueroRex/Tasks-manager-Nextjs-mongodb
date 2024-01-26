@@ -40,12 +40,12 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-hidden`}>
         <Providers>
           <ThemeContextProvider>
             <TaskContextProvider>
               <header
-                className={`h-[250px] flex justify-center relative`}
+                className={`h-[250px] w-[100%] flex justify-center relative`}
                 style={{
                   background: "rgb(68,137,180)",
                   background:
