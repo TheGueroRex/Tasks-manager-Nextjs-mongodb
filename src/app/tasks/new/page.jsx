@@ -136,7 +136,7 @@ function FormPage() {
               type="submit"
               className="bg-violet-700 px-8 py-2 text-white rounded-xl"
             >
-              {!params.id ? "Save" : "Update"}
+              {!params.id ? "Guardar" : "Actualizar"}
             </button>
             <button
               type="button"
@@ -145,7 +145,7 @@ function FormPage() {
                 params.id ? "visible" : "hidden"
               } bg-red-600 h-[40px] w-[100px] ml-5 text-white rounded-xl`}
             >
-              Delete
+              Eliminar
             </button>
           </div>
         </form>

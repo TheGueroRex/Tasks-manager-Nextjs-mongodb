@@ -80,7 +80,7 @@ function TaskCard({ task, index }) {
           {task.description}
         </p>
         <p className="text-sm mt-auto text-slate-500">
-          Created At:{" "}
+          Creado el:{" "}
           <span className="text-sky-600 font-semibold">
             {new Date(task.createdAt).toLocaleDateString()}
           </span>
@@ -91,7 +91,7 @@ function TaskCard({ task, index }) {
         href={`/tasks/${task._id}`}
         className={`absolute ${
           isHovered
-            ? "scale-1 translate-x-[-100%] translate-y-[-150%]"
+            ? "scale-1 translate-x-[-90%] translate-y-[-120%]"
             : "scale-0"
         }
             ${
@@ -151,7 +151,7 @@ function TaskCard({ task, index }) {
         onClick={handleDelete}
         className={`absolute ${
           isHovered
-            ? "scale-1 translate-x-[-100%] translate-y-[150%]"
+            ? "scale-1 translate-x-[-90%] translate-y-[120%]"
             : "scale-0"
         } ${
           theme == "light" ? "bg-slate-200" : "bg-slate-900"

@@ -13,9 +13,9 @@ function Info() {
 
   return (
     <section className={`flex w-[600px] max-sm:w-[90%] absolute`}>
-      <h3 className="text-white p-8 max-[500px]:p-2">
+      <h3 className="text-white p-8 max-[500px]:px-2 py-10">
         
-        {currentRoute == "/login" || currentRoute == "/register" ? <p><strong className="text-3xl">DevTasks </strong> <br />Administrador de tareas minimalista</p> : <div className="text-3xl">Hola, <br /> {userName}</div> }
+        {currentRoute == "/login" || currentRoute == "/register" ? <p><strong className="text-3xl">Bienvenido a <h2 className="text-sky-500">DevTasks </h2></strong>Administrador de tareas minimalista</p> : <div className="text-3xl">Hola, <br /> {userName}</div> }
       </h3>
 
       <div className={`${currentRoute == "/login" || currentRoute == "/register" ? "hidden" : "visible"} flex self-start p-8 ml-auto gap-[20px] max-[500px]:p-2 max-[500px]:flex-col`}>

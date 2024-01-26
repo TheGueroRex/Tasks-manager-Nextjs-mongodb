@@ -24,7 +24,7 @@ function Navbar({ sigOut }) {
           currentRoute == "/login" || currentRoute == "/register"
             ? "hidden"
             : "visible"
-        } absolute w-[100%] h-12 flex bottom-12 justify-between items-center`}
+        } absolute w-[100%] h-12 flex bottom-10 justify-between items-center`}
       >
         <div className="flex gap-4">
           {session ? (

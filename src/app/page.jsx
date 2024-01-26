@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useTheme } from "./context/ThemeContext";
 
 function HomePage() {
+  const { theme } = useTheme();
+
   const { tasksUser } = useTareasContext();
   const { tasksUserLength } = useTareasContext();
 
@@ -17,13 +19,13 @@ function HomePage() {
         `}
       </style>
       <section
-        className={`transition flex flex-col w-[600px] max-sm:w-[90%] min-h-[150px] absolute top-[-50px] gap-6 mt-4 p-4 rounded-2xl h-[100%] overflow-y-scroll scroll-hidden`}>
+        className={`transition flex flex-col w-[600px] max-sm:w-[90%] min-h-[150px] absolute top-[-50px] gap-6 mt-4 px-4 rounded-2xl h-[100%] overflow-y-scroll scroll-hidden`}>
         {tasksUserLength == 0 ? (
           <div className="w-[100%] h-[100%] flex flex-col items-center gap-8">
-            <h2>Crear mi primer tarea</h2>
+            
             <Link
               href={"/tasks/new"}
-              className={`scale-150 group w-[40px] h-[40px] grid place-items-center bg-sky-600 rounded-[50%]`}
+              className={`scale-150 mt-4 group w-[40px] h-[40px] grid place-items-center bg-sky-600 rounded-[50%]`}
             >
               <svg
                 className="group-hover:scale-110 transition"
@@ -46,6 +48,7 @@ function HomePage() {
                 </defs>
               </svg>
             </Link>
+            <h2 className={`${theme == "ligth" ? "text-slate-800":"text-slate-100"}`}>Crear mi primer tarea</h2>
           </div>
         ) : (
           tasksUser.map((task, index) => (
