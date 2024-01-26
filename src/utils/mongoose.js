@@ -8,7 +8,6 @@ export async function connectDB(){
     if(conn.isConnected) return;
 
     const db = await mongoose.connect("mongodb+srv://TheGueroDev:theguerodev123@cluster0.hap0n2c.mongodb.net/?retryWrites=true&w=majority");
-    console.log(db.connection.db.databaseName);
     conn.isConnected = db.connections[0].readyState
 }
 
