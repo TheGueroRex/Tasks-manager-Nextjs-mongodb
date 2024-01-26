@@ -10,6 +10,7 @@ import Info from "@/components/Info";
 import TaskContextProvider from "./context/TaskContext";
 import ThemeContextProvider from "./context/ThemeContext";
 import Background from "@/components/Background";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,12 +41,18 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={`${inter.className} overflow-hidden`}>
+      <Head>
+        <meta
+          name="viewport"
+          content="user-scalable=no, width=device-width, initial-scale=1"
+        />
+      </Head>
+      <body className={`${inter.className} w-full`}>
         <Providers>
           <ThemeContextProvider>
             <TaskContextProvider>
               <header
-                className={`h-[250px] w-[100%] flex justify-center relative`}
+                className={`h-[30vh] w-[100%] flex justify-center relative overflow-hidden`}
                 style={{
                   background: "rgb(68,137,180)",
                   background:
@@ -59,9 +66,9 @@ export default async function RootLayout({ children }) {
 
               <main
                 className={` flex justify-center relative w-[100%] `}
-                style={{ height: "calc(100vh - 250px)" }}
+                style={{ height: "70vh" }}
               >
-                <Background/>
+                <Background />
                 {children}
               </main>
             </TaskContextProvider>
