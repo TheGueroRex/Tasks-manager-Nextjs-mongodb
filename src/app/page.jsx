@@ -19,7 +19,7 @@ function HomePage() {
         `}
       </style>
       <section
-        className={`transition flex flex-col w-[600px] max-sm:w-[90%] min-h-[150px] absolute top-[-50px] gap-6 mt-4 px-4 rounded-2xl h-[100%] overflow-y-scroll scroll-hidden`}>
+        className={`transition flex flex-col w-[600px] max-sm:w-[100%] min-h-[150px] absolute top-[-50px] gap-6 mt-4 px-4 rounded-2xl h-[100%] overflow-y-scroll scroll-hidden`}>
         {tasksUserLength == 0 ? (
           <div className="w-[100%] h-[100%] flex flex-col items-center gap-8">
             
